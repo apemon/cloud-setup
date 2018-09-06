@@ -1,0 +1,3 @@
+git clone https://github.com/apemon/jenkins2-with-docker
+docker-compose -f docker-compose.build.yml build
+docker-compose up -d
