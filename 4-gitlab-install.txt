@@ -1,3 +1,4 @@
+// not use docker run anymore
 docker run -d \
     --hostname gitlab.example.com \
     -p 8443:443 -p 8080:80 -p 10022:22 \
@@ -5,5 +6,6 @@ docker run -d \
     -v /srv/gitlab/config:/etc/gitlab \
     -v /srv/gitlab/logs:/var/log/gitlab \
     -v /srv/gitlab/data:/var/opt/gitlab \
-    -e "GITLAB_SHELL_SSH_PORT=10022" \
     gitlab/gitlab-ce:11.2.3-ce.0
+// docker-compose script
+docker-compose -f docker-compose.gitlab.yml up -d
