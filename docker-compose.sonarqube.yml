@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  jenkins:
+    image: sonarqube:7.1-alpine
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+
