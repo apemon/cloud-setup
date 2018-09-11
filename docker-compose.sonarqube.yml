@@ -1,9 +1,12 @@
 version: "3"
 services: 
-  jenkins:
+  sonarqube:
     image: sonarqube:7.1-alpine
     container_name: sonarqube
     ports:
       - "9000:9000"
       - "9092:9092"
-
+    environment:
+      - JAVA_OPTS="-Xmx1536m"
+    volumes:
+      - /srv/sonarqube/data:/opt/sonarqube/data

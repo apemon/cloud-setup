@@ -8,7 +8,7 @@ services:
       - "10080:8080"
       - "50000:50000"
     volumes:
-      - ./home:/var/jenkins_home
-      - ./logs:/var/log/jenkins
+      - /srv/jenkins/home:/var/jenkins_home
+      - /srv/jenkins/log:/var/log/jenkins
       - /var/run/docker.sock:/var/run/docker.sock
 
