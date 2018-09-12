@@ -14,3 +14,8 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         gitlab_rails['gitlab_shell_ssh_port'] = 10022
+    networks:
+      - ci
+
+networks:
+  ci:

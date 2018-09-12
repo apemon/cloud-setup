@@ -11,4 +11,8 @@ services:
       - /srv/jenkins/home:/var/jenkins_home
       - /srv/jenkins/log:/var/log/jenkins
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - ci
 
+networks:
+  ci:
